@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Creating the map object
+    // Creating the map object centered in alska
     let map = L.map("map", {
       center: [61.2176, -149.8997],
       zoom: 5
@@ -10,12 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
       attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
     }).addTo(map);
   
-    // TileLayer loads without error
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
-    }).addTo(map);
-  
-    // Connects to geojson API using D3 without error
+    // Connects to geojson API using D3
     d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson')
       .then(function(data) {
         // Code for processing the earthquake data
