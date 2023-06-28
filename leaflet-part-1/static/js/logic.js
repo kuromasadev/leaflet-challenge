@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Creating the map object centered in alska
     let map = L.map("map", {
       center: [61.2176, -149.8997],
-      zoom: 5
+      zoom: 7.5
     });
   
     // Adding the tile layer
@@ -51,9 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Create a legend
         var legend = L.control({ position: 'topright' });
         legend.onAdd = function(map) {
-          var div = L.DomUtil.create('div', 'info legend');
+          var div = L.DomUtil.create('div', 'legend-container');
           div.innerHTML = '<h4>Depth Legend</h4>'; 
-          div.style.backgroundColor = 'white'; 
           var depths = [0, 10, 30, 70];
           var labels = [];
   

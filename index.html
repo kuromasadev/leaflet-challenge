@@ -7,42 +7,64 @@
             background-color: #fff; 
             color: #000; 
             font-family: Arial, sans-serif;
+            margin: 0;
         }
 
         .link-container {
+            position: relative;
+            height: 100vh;
             display: flex;
             justify-content: space-around;
-            padding: 50px 0;
+            align-items: center;
         }
 
         .link-container a {
-            display: inline-block;
-            color: #9a9aef; 
-            text-decoration: none;
+            display: block;
+            position: relative;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
         }
 
         .link-container img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        .link-container .text {
+        .link-container .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
             text-align: center;
+        }
+
+        .link-container h2, .link-container h3 {
+            margin: 0;
         }
     </style>
 </head>
 <body>
 
-    <h2>Using Leaflet for Visualization</h2>
-    <h3>Simple and advanced samples</h3>
-
     <div class="link-container">
-        <a href="/leaflet-part-1/index.html">
-            <img src="image1.png" alt="Go to Page 1">
+        <a href="./leaflet-part-1/index.html">
+            <img src="./img/p1.png" alt="Go to Simple Dashboard">
+            <div class="text-container">
+                <h2>Simple Earthquake Dashboard</h2>
+                <h3>using vanilla leaflet </h3>
+            </div>
         </a>
         <a href="/leaflet-part-2/index.html">
-            <img src="image2.png" alt="Go to Page 2">
+            <img src="./img/p2.png" alt="Go to Advanced Dashboard">
+            <div class="text-container">
+                <h2>Advanced Earth Dashboard</h2>
+                <h3>using leaflet plugins </h3>
+            </div>
         </a>
     </div>
+
 </body>
 </html>
