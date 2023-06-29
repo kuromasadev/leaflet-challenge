@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Define the size and color of markers based on earthquake properties
         function getMarkerOptions(magnitude, depth) {
           return {
-            radius: magnitude * 4, // Adjust the size of the marker based on the magnitude
+            radius: magnitude * 4, 
             fillColor: getColor(depth),
             color: '#000',
             weight: 1,
@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function() {
           div.innerHTML = '<h4>Depth Legend</h4>'; 
           var depths = [0, 10, 30, 70];
           var labels = [];
-  
+
           // Loop through the depth intervals and generate labels with colors
           for (var i = 0; i < depths.length; i++) {
             div.innerHTML +=
-              '<i style="background:' + getColor(depths[i] + 1) + '"></i> ' +
+              '<i class="legend-marker" style="background:' + getColor(depths[i] + 1) + '"></i> ' +
               depths[i] + (depths[i + 1] ? '&ndash;' + depths[i + 1] + '<br>' : '+');
           }
   
@@ -72,11 +72,5 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log('Error loading geojson data:', error);
       });
   
-    function getColor(depth) {
-      return depth > 70 ? '#800026' :
-        depth > 30 ? '#BD0026' :
-        depth > 10 ? '#E31A1C' :
-        '#FFEDA0';
-    }
   });
   

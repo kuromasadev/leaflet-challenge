@@ -21,7 +21,7 @@
 
 .text-container {
   position: absolute;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -32,13 +32,20 @@
 }
 
 .legend-container {
-  position: absolute;
-  top: 50%;
-  left: 150%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 398%);
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 20px;
   text-align: center;
+}
+
+.legend-marker {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
 }
